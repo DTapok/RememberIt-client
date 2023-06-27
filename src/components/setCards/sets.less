@@ -1,0 +1,432 @@
+@import "../../utils/colors.less";
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 30vw;
+    background-color: @selected-color;
+    color: @font-color;
+    border-radius: 5%;
+    text-align: center;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: @selected-color transparent transparent transparent;
+
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.create {
+    margin-top: 5vh;
+    width: 100vw - 40%;
+    height: 100vh - 30%;
+    background-color: @secondary-color;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    border: 3px solid @font-color;
+
+    &__header {
+        width: 50vw;
+
+        &__title {
+
+            &:focus {
+                transform: scale(1.03);
+                background-color: @selected-color;
+            }
+        }
+
+        &__category {
+            padding: 5px 10px;
+            border: 2px solid @second-font-color;
+            cursor: pointer;
+            display: flex;
+            margin: auto;
+            font-size: 24px;
+            background-color: @secondary-color;
+            //width: $select-width;
+            //height: $select-height;
+
+            &__hidden {
+                display: none;
+                visibility: hidden;
+                padding-right: 10px;
+            }
+
+            &:hover {
+                transform: scale(1.03);
+            }
+
+            &:focus {
+                transform: scale(1);
+                background-color: @selected-color;
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+
+        &__input {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+
+            &__front {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-left: 3vw;
+
+                &__title {
+                    cursor: default;
+                }
+
+                &__inputText {
+                    font-size: 24px;
+                    border: 4px solid @font-color;
+                    border-radius: 7%;
+                    padding: 1vh;
+                    resize: none;
+                    width: 25vw;
+                    height: 40vh;
+                    cursor: pointer;
+                    outline: none;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    &:focus {
+                        transform: scale(1);
+                        background-color: @selected-color;
+                    }
+                }
+
+                &__wrapper {
+                    width: 25vw;
+                    height: 40vh;
+
+
+                    &__img {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        &__load {
+                            border: 4px solid @font-color;
+                            border-radius: 2%;
+                            padding: 10px;
+                            max-width: 30vw;
+                            max-height: 30vh;
+                        }
+
+                        &__border {
+                            border: 4px dashed @font-color;
+                            border-radius: 2%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 25vw;
+                            height: 30vh;
+                        }
+
+                        &__def {
+                            width: 5vw;
+                            height: 5vh;
+                        }
+
+                    }
+
+
+                    &__inputFile {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+
+                    &__inputFile-button-text {
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+
+                    &__inputFile-button {
+                        width: 15vw;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 4px solid @font-color;
+                        border-radius: 2%;
+                        cursor: pointer;
+                        margin: auto;
+
+                        &:hover {
+                            transform: scale(1.03);
+                            opacity: 0.5;
+                        }
+
+                        &:active {
+                            opacity: 1;
+                            background-color: @second-font-color;
+                        }
+                    }
+                }
+
+                &__btn {
+                    display: flex;
+                    margin-top: 1vw;
+
+                    &__Text {
+                        width: 4vw;
+                        height: 4vh;
+
+                        &:hover {
+                            transform: scale(1.04);
+                            opacity: 0.5;
+                        }
+
+                        &:active {
+                            opacity: 1;
+                        }
+                    }
+
+                    &__File {
+                        width: 4vw;
+                        height: 4vh;
+
+                        &:hover {
+                            transform: scale(1.04);
+                            opacity: 0.5;
+                        }
+
+                        &:active {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+            }
+
+
+            &__back {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-right: 3vw;
+
+                &__title {
+                    cursor: default;
+                }
+
+                &__input {
+                    font-size: 24px;
+                    border: 4px solid @font-color;
+                    padding: 1vh;
+                    resize: none;
+                    width: 25vw;
+                    height: 40vh;
+                    border-radius: 7%;
+                    cursor: pointer;
+                    outline: none;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+
+                    &:focus {
+                        transform: scale(1);
+                        background-color: @selected-color;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 25px;
+
+            &__previous {
+                width: 4vw;
+                height: 4vh;
+
+                &:hover {
+                    transform: scale(1.04);
+                    opacity: 0.5;
+                }
+
+                &:active {
+                    opacity: 1;
+                }
+            }
+
+            &__number {
+                cursor: default;
+            }
+
+            &__next {
+                width: 4vw;
+                height: 4vh;
+
+                &:hover {
+                    transform: scale(1.04);
+                    opacity: 0.5;
+                }
+
+                &:active {
+                    opacity: 1;
+                }
+            }
+
+            &__save {
+                margin-left: auto;
+                border: 4px solid @font-color;
+                border-radius: 2%;
+
+                &:hover {
+                    transform: scale(1.03);
+                    opacity: 0.5;
+                }
+
+                &:active {
+                    opacity: 1;
+                    background-color: @second-font-color;
+                }
+            }
+        }
+    }
+}
+
+.createSet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    font-size: 30px;
+
+
+    &__Btn {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 40px;
+
+        user-select: none;
+
+        &__btnCancel {
+            margin: auto;
+            background-color: @secondary-color;
+            border-radius: 20%;
+            padding: 10px 20px;
+            border: 4px solid @font-color;
+
+            &:hover {
+                transform: scale(1.03);
+                opacity: 0.5;
+            }
+
+            &:active {
+                opacity: 1;
+                background-color: @second-font-color;
+            }
+        }
+
+        &__btnSave {
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            background-color: @secondary-color;
+            border-radius: 20%;
+            padding: 10px 20px;
+            border: 4px solid @font-color;
+
+            &:hover {
+                transform: scale(1.03);
+                opacity: 0.5;
+            }
+
+            &:active {
+                opacity: 1;
+                background-color: @second-font-color;
+            }
+        }
+
+        &__btnHelp {
+            margin: auto;
+            background-color: @secondary-color;
+            border-radius: 30%;
+            width: 60px;
+            height: 60px;
+            border: 4px solid @font-color;
+
+            &:hover {
+                transform: scale(1.04);
+                opacity: 0.5;
+            }
+
+            &:active {
+                opacity: 1;
+                background-color: @second-font-color;
+            }
+
+        }
+    }
+}

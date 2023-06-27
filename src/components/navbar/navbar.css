@@ -1,0 +1,140 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E7B26C;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.navbar__header {
+  margin-left: 10px;
+  font-weight: 700;
+}
+.navbar__header:hover {
+  border: none;
+  border-bottom: #994625 solid 3px;
+}
+.navbar__header:active {
+  opacity: 0.5;
+}
+.navbar__login {
+  margin: 0 0 0 10px;
+  margin-left: auto;
+}
+.navbar__login:hover {
+  border: none;
+  border-bottom: #994625 solid 3px;
+}
+.navbar__login:active {
+  opacity: 0.5;
+}
+.navbar__logout {
+  cursor: pointer;
+  margin: 0 20px 0 0;
+}
+.navbar__logout:hover {
+  border: none;
+  border-bottom: #994625 solid 3px;
+}
+.navbar__logout:active {
+  opacity: 0.5;
+}
+.navbar__published {
+  margin: 10px;
+}
+.navbar__published:hover {
+  border: none;
+  border-bottom: #994625 solid 3px;
+}
+.navbar__published:active {
+  opacity: 0.5;
+}
+.navbar__saved {
+  margin: 10px;
+}
+.navbar__saved:hover {
+  border: none;
+  border-bottom: #994625 solid 3px;
+}
+.navbar__saved:active {
+  opacity: 0.5;
+}
+.navbar__create {
+  margin: 10px;
+  margin-left: auto;
+  margin-top: 10px;
+}
+.navbar__create:hover {
+  border: none;
+  border-bottom: #994625 solid 3px;
+}
+.navbar__create:active {
+  opacity: 0.5;
+}
+.navbar__profile {
+  margin-right: 10px;
+}
+.navbar__profile:hover {
+  scale: 1.1;
+}
+.navbar__profile:active {
+  opacity: 0.5;
+}
+.navbar__profile__img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #994625;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.navbar__profile__img2 {
+  margin-top: 10px;
+  width: 35px;
+  border: 2px solid #994625;
+  background-color: #E7B26C;
+  border-radius: 50%;
+}
+.navbar__registration {
+  margin: 10px;
+}
+.navbar__registration:hover {
+  border: none;
+  border-bottom: #994625 solid 3px;
+}
+.navbar__registration:active {
+  opacity: 0.5;
+}
+.tooltip2 .tooltiptext2 {
+  visibility: hidden;
+  width: 160px;
+  background-color: #994625;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 5.5%;
+  right: 3.5%;
+  /* Fade in tooltip */
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip2:hover .tooltiptext2 {
+  visibility: visible;
+  opacity: 0.7;
+}

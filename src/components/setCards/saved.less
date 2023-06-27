@@ -1,0 +1,220 @@
+@import "../../utils/colors.less";
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: @font-color;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: @font-color transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mess2 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    z-index: 1;
+    user-select: none;
+}
+
+.saved {
+    font-size: 24px;
+    display: flex;
+    width: 45vw;
+    height: 45vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 1em;
+
+
+    &__title {
+        margin: 1em 0 0 0;
+        font-size: 30px;
+        cursor: default;
+        user-select: none;
+    }
+
+    &__set {
+        display: grid;
+        grid-template-columns: 2.5fr 0.5fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__set2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__create {
+        background-color: @secondary-color;
+        padding: 1em;
+        overflow: auto;
+        border: 8px solid @font-color;
+        width: 100%;
+        height: 100%;
+
+
+        &__mess {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            user-select: none;
+        }
+
+        &__set {
+            display: grid;
+            grid-template-columns: 3fr 0.5fr 0.5fr 0.5fr;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            border: 4px solid @font-color;
+            border-radius: 40%;
+            width: 80px;
+            height: 80px;
+
+            &__img {
+                width: 50px;
+                height: 50px;
+            }
+
+            &:hover {
+                transform: scale(1.04);
+                opacity: 0.7;
+            }
+
+            &:active {
+                opacity: 1;
+                background-color: @second-font-color;
+            }
+        }
+
+        &__btn2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid @font-color;
+            border-radius: 40%;
+            width: 80px;
+            height: 80px;
+            margin-left: 20px;
+
+            &__img {
+                width: 50px;
+                height: 50px;
+            }
+
+            &:hover {
+                transform: scale(1.04);
+                opacity: 0.7;
+            }
+
+            &:active {
+                opacity: 1;
+                background-color: @second-font-color;
+            }
+        }
+    }
+
+}
+
+.sets {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    color: @font-color;
+    border: 4px solid @font-color;
+    border-radius: 20px;
+    margin: 10px 0;
+    cursor: default;
+    user-select: none;
+
+    &__name {
+        margin: 1em;
+        cursor: pointer;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+    }
+
+    &__category {
+        margin: 1em;
+    }
+
+    &__author {
+        margin: 1em;
+        cursor: pointer;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.04);
+    }
+
+}
+
+.sets2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    color: @font-color;
+    border: 4px solid @font-color;
+    border-radius: 20px;
+    margin: 10px 0;
+    cursor: default;
+    user-select: none;
+    width: 45vw;
+    font-size: 25px;
+}

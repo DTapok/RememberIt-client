@@ -1,0 +1,40 @@
+@import "../../utils/colors.less";
+
+.mainP {
+    background: url('/src/assetc/img/Back.png');
+    width: 100vw - 2vw;
+    height: 100vh - 5.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainPage {
+    width: 100vw - 40px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 4px solid @font-color;
+    background-color: @selected-color;
+    border-radius: 20px;
+    font-size: 30px;
+    opacity: 0.8;
+
+    &__textPage {
+        display: flex;
+        justify-content: space-around;
+        width: 100vw - 40px;
+        padding: 20px 10px;
+        margin: 20px 0;
+    }
+
+    &__textPage2 {
+        display: flex;
+        justify-content: space-around;
+        width: 100vw - 40px;
+        padding: 0 20px;
+        font-size: 24px;
+    }
+}

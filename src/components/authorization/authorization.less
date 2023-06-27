@@ -1,0 +1,79 @@
+@import "../../utils/colors.less";
+
+.authorization {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 24px;
+
+    input {
+        &:focus {
+            transform: scale(1.03);
+            background-color: @selected-color;
+        }
+    }
+
+    &__header {
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    &__error {
+        margin-top: 30px;
+    }
+
+    &__btn {
+        background-color: @secondary-color;
+        border-radius: 20%;
+        padding: 10px 20px;
+        margin-top: 20px;
+
+        &:hover {
+            transform: scale(1.03);
+            opacity: 0.5;
+        }
+
+        &:active {
+            opacity: 1;
+            background-color: @second-font-color;
+        }
+    }
+
+    &__radio {
+        display: flex;
+        flex-direction: row;
+
+
+        &__btn {
+            display: flex;
+            flex-direction: row;
+            margin: 10px 20px;
+        }
+
+        &__label {
+            margin-left: 0px;
+        }
+
+        &__input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            border: 2px solid @second-font-color;
+            transition: 0.2s all linear;
+            outline: none;
+
+            position: relative;
+            top: 4px;
+        }
+
+        &__input:checked {
+            border: 8px solid @font-color;
+        }
+    }
+}

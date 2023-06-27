@@ -1,0 +1,163 @@
+@import "../../utils/colors.less";
+
+.navbar {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    background-color: @secondary-color;
+    align-items: center;
+    width: 100%;
+    font-size: 24px;
+    user-select: none;
+
+    &__header {
+        margin-left: 10px;
+        font-weight: 700;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__login {
+        margin: 0 0 0 10px;
+        margin-left: auto;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__logout {
+        cursor: pointer;
+        margin: 0 20px 0 0;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__published {
+        margin: 10px;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__saved {
+        margin: 10px;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__create {
+        margin: 10px;
+        margin-left: auto;
+        margin-top: 10px;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__profile {
+        margin-right: 10px;
+
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+
+        &__img {
+            width: 40px;
+            height: 40px;
+            border: 1px solid @font-color;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        &__img2 {
+            margin-top: 10px;
+            width: 35px;
+            border: 2px solid @font-color;
+            background-color: @secondary-color;
+            border-radius: 50%;
+
+
+        }
+    }
+
+    &__registration {
+        margin: 10px;
+
+        &:hover {
+            border: none;
+            border-bottom: @font-color solid 3px;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}
+
+.tooltip2 .tooltiptext2 {
+    visibility: hidden;
+    width: 160px;
+    background-color: @font-color;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 5.5%;
+    right: 3.5%;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+    opacity: 0.7;
+}
